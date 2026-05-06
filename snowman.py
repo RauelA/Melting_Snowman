@@ -1,9 +1,7 @@
 import random
 
-# List of secret words
 WORDS = ["python", "git", "github", "snowman", "meltdown"]
 
-# Snowman ASCII Art stages
 STAGES = [
     # Stage 0: Full snowman
     """
@@ -42,10 +40,8 @@ def get_random_word():
 def display_game_state(mistakes, secret_word, guessed_letters):
     """Displays the current game state."""
 
-    # Show current snowman stage
     print(STAGES[mistakes])
 
-    # Build word display
     display_word = ""
     for letter in secret_word:
         if letter in guessed_letters:
@@ -66,7 +62,6 @@ def play_game():
     mistakes = 0
     guessed_letters = []
 
-    # Simple game loop (no full logic yet)
     while mistakes < len(STAGES) - 1:
         display_game_state(mistakes, secret_word, guessed_letters)
 
@@ -74,15 +69,17 @@ def play_game():
 
         if guess:
             guessed_letters.append(guess)
-
-            # TEMP: For testing → increase mistakes every round
-            # (Later ersetzen durch echte Logik)
-            mistakes += 1
+            if not guess in secret_word:
+                mistakes += 1
 
     # Final state
     display_game_state(mistakes, secret_word, guessed_letters)
     print("Game over! The snowman has melted.")
 
 
-if __name__ == "__main__":
+def main():
     play_game()
+
+
+if __name__ == "__main__":
+    main()
