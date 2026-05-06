@@ -1,4 +1,5 @@
 STAGES = [
+    # 1. Stage (0 mistakes = Start)
     """
      ___  
     /___\\ 
@@ -7,6 +8,7 @@ STAGES = [
     ( : ) 
     """,
 
+    # 2. Stage (1 mistake)
     """
      ___  
     /___\\ 
@@ -15,6 +17,7 @@ STAGES = [
      """
     ,
 
+    # 3. Stage (2 mistakes)
     """
      ___  
     /___\\ 
@@ -22,17 +25,20 @@ STAGES = [
      """
     ,
 
+    # 4. Stage (3 mistakes)
     """
      ___  
     /___\\ 
      """
     ,
 
+    # 5. Stage (4 mistakes)
     """
      ___  
      """
     ,
 
+    # 6. Stage (5 mistakes = Loss)
     """
 
      """
